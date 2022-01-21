@@ -1,9 +1,17 @@
 backend:
   name: github
+  repo: Kolya-YA/test-netlify-cms
   # branch: main # Branch to update (optional; defaults to master)
 media_folder: static/img
 public_folder: /img
 collections:
+  - name: "homepage"
+    label: "Home page"
+    folder: 'content'
+    file: 'index.md'
+    fields: 
+      - { label: Title, name: title, widget: string }
+      
   - name: 'blog'
     label: 'Blog'
     folder: 'content/blog'
