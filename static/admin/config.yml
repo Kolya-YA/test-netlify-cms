@@ -11,9 +11,10 @@ collections:
     file: 'index.md'
     fields: 
       - { label: Title, name: title, widget: string }
-      
+
   - name: 'blog'
     label: 'Blog'
+    format: 'toml'
     folder: 'content/blog'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
