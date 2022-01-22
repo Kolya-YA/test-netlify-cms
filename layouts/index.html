@@ -10,12 +10,12 @@
   <h1>{{ .Title }}</h1>
   {{ .Content}}
   <ul>
-    {{ range (where .Pages "Section" "blog") }}
+    {{ range where .Pages "Section" "blog" }}
+    {{ range .Pages }}
     <li>
-      <a href="{{ .RelPermalink }}">
-        {{ .Title }}
-      </a>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     </li>
+    {{ end }}
     {{ end }}
   </ul>
 </body>

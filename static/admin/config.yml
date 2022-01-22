@@ -5,16 +5,19 @@ backend:
 media_folder: static/img
 public_folder: /img
 collections:
-  - name: "homepage"
-    label: "Home page"
-    folder: 'content'
-    file: 'index.md'
-    fields: 
-      - { label: Title, name: title, widget: string }
+  - label: 'Pages'
+    name: 'pages'
+    files:
+      - label: "Home page"
+        name: "homepage"
+        folder: 'content'
+        file: 'index.md'
+        fields: 
+          - { label: Title, name: title, widget: string }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - name: 'blog'
     label: 'Blog'
-    format: 'toml'
     folder: 'content/blog'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
